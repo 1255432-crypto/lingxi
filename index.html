@@ -506,7 +506,17 @@
       .life-card { min-height:220px; }
       .behind-card { min-height:180px; }
     }
-  </style>
+  
+    .lyrics-list{display:grid;gap:14px}
+    .full-lyrics-card{border:1px solid var(--line);border-radius:24px;background:rgba(255,255,255,.025);overflow:hidden}
+    .full-lyrics-card summary{padding:22px 24px;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:20px}
+    .full-lyrics-card summary::-webkit-details-marker{display:none}
+    .full-lyrics-card summary span{font-size:18px;font-weight:700;color:var(--text)}
+    .full-lyrics-card summary small{font-size:12px;letter-spacing:1.5px;color:var(--muted);white-space:nowrap}
+    .full-lyrics-card[open] summary{border-bottom:1px solid var(--line)}
+    .full-lyrics-card pre{margin:0;padding:24px;white-space:pre-wrap;font:inherit;font-size:14px;line-height:2;color:#bdb7be;max-height:520px;overflow:auto}
+
+</style>
 </head>
 
 <body>
@@ -720,7 +730,162 @@
     </div>
   </section>
 
-  <section class="section" id="links">
+  
+  <section class="section" id="lyrics">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="section-kicker">LYRICS</div>
+          <h2 class="section-title">歌詞</h2>
+        </div>
+        <div class="section-note">點選歌曲展開完整歌詞</div>
+      </div>
+      <div class="lyrics-list">
+
+        <details class="full-lyrics-card">
+          <summary><span>我真的撐不住了</span><small>查看歌詞</small></summary>
+          <pre>[Verse 1]
+你說這段愛已經走到盡頭
+我卻還不肯放手
+那些一起走過的以後
+現在只剩我一個人停留
+
+[Verse 2]
+你轉身那一刻太冷
+冷到我無法承受
+我連一句挽留都沒有
+只剩眼淚失控
+
+[Pre-Chorus]
+我忍著不崩潰
+卻撐不到明天
+
+[Chorus]
+我真的撐不住了你知道嗎
+沒有你我什麼都不像啊
+我把自己困在這段愛裡
+走不出去也放不下
+
+我真的撐不住了你知道嗎
+每一秒都在崩塌
+如果失去你才叫長大
+那我寧願不要長大
+
+[Verse 3]
+房間還留著你的味道
+我怎麼清都清不掉
+每一個角落都在提醒
+你已經走掉
+
+[Pre-Chorus 2]
+我試著讓自己睡著
+卻整夜醒著心跳
+
+[Bridge]
+我崩潰在凌晨三點
+連自己都不認得
+
+[Chorus - Final]
+我真的撐不住了你知道嗎
+沒有你我什麼都不像啊
+我把自己困在這段愛裡
+走不出去也放不下
+
+我真的撐不住了你知道嗎（高音延長）
+我真的快要壞掉了啊（爆）
+如果這就是愛的代價
+為什麼是我留下
+
+[Outro]
+我撐不住了……</pre>
+        </details>
+
+        <details class="full-lyrics-card">
+          <summary><span>還在這裡</span><small>查看歌詞</small></summary>
+          <pre>[Verse 1]
+夜走得太慢
+時間像故意試探
+我把心事一層一層
+疊成不說的答案
+
+窗外的燈
+亮得有點心寒
+世界沒有為誰停下
+我卻停在原地回看
+
+[Pre-Chorus]
+如果眼淚真的有重量
+為什麼還能往下藏
+原來我不是不痛
+只是還不想退場
+
+[Chorus]
+我沒有比較勇敢
+只是學會不閃躲
+當風聲越來越大
+我沒有轉身走
+
+我沒有更多把握
+卻也沒有放手
+就算什麼都沒留下
+至少 我還在這裡活
+
+[Verse 2]
+人來又人往
+像一場短暫合唱
+有些名字沒能唱完
+就被時間收場
+
+我試著笑
+卻比哭更慌張
+原來習慣逞強
+也是一種投降
+
+[Pre-Chorus 2]
+如果明天不給方向
+至少今晚我還能想
+心跳那麼清楚
+騙不了自己一樣
+
+[Chorus]
+我沒有比較勇敢
+只是沒有離開
+在最安靜的角落
+撐住最後的期待
+
+我沒有完美模樣
+也沒有誰欣賞
+但只要心還沒冷卻
+我就不算 被遺忘
+
+[Bridge｜情緒最高點，A-Lin 式拉升]
+如果世界真的那麼吵
+那就讓我用沉默對抗
+就算聲音快要用完
+我也不想 就這樣退場
+
+[Final Chorus｜全開但不灑狗血]
+我沒有奇蹟降臨
+也沒有誰來證明
+只是當夜色再一次逼近
+我還願意 呼吸
+
+如果有一天我累了
+不是因為失望
+只是我終於學會
+把溫柔 留給自己收藏
+
+[Outro]
+燈一盞一盞暗下去
+世界慢慢不說話
+而我知道
+至少此刻
+我沒有離開</pre>
+        </details>
+      </div>
+    </div>
+  </section>
+<section class="section" id="links">
     <div class="wrap">
       <div class="section-head">
         <div>
