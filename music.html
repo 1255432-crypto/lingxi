@@ -1,162 +1,43 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>聆汐 LingXi｜Music</title>
-  <meta name="description" content="聆汐 LingXi 音樂作品列表">
-  <meta name="theme-color" content="#0d0d10">
-  <style>
-    *{box-sizing:border-box}
-    body{
-      margin:0;min-height:100vh;color:#f5f2ef;
-      background:linear-gradient(180deg,#121216,#09090b);
-      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","PingFang TC",sans-serif
-    }
-    a{color:inherit;text-decoration:none}
-    .nav{
-      position:sticky;top:0;z-index:20;background:rgba(9,9,11,.82);
-      backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
-      border-bottom:1px solid rgba(255,255,255,.08)
-    }
-    .nav-inner{
-      max-width:1120px;margin:auto;padding:15px 20px;
-      display:flex;align-items:center;justify-content:space-between
-    }
-    .brand{font-family:Georgia,serif;font-style:italic;font-size:26px}
-    .brand small{font-style:normal;font-size:12px;margin-left:7px;color:#aaa4aa}
-    .back{
-      border:1px solid rgba(255,255,255,.18);border-radius:999px;
-      padding:9px 13px;font-size:11px;letter-spacing:1px;color:#d8d2d6
-    }
-    .hero{max-width:1120px;margin:auto;padding:38px 20px 18px}
-    .eyebrow{font-size:10px;letter-spacing:4px;color:#8f8990;margin-bottom:9px}
-    h1{margin:0;font-size:40px;font-weight:500}
-    .sub{margin-top:10px;color:#8f8990;font-size:13px;line-height:1.7}
-    .grid{
-      max-width:1120px;margin:auto;padding:12px 20px 70px;
-      display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px
-    }
-    .song{
-      border-radius:18px;border:1px solid rgba(255,255,255,.08);
-      background:rgba(255,255,255,.035);overflow:hidden;padding:8px
-    }
-    .spotify-frame{
-      width:100%;height:152px;border:0;border-radius:12px;display:block;
-      background:#18181c
-    }
-    .song-meta{padding:10px 3px 2px}
-    .song-no{font-size:9px;letter-spacing:2px;color:#77727a;margin-bottom:5px}
-    .song h2{font-size:14px;font-weight:500;margin:0 0 3px}
-    .artist{font-size:11px;color:#858087}
-    .song-actions{display:block;margin-top:9px}
-    .spotify-btn{
-      display:block;text-align:center;padding:9px 8px;border-radius:999px;font-size:11px;
-      background:#eee8eb;color:#111214
-    }
-    .lyrics-toggle{
-      margin-top:8px;border:1px solid rgba(255,255,255,.16);border-radius:14px;
-      background:rgba(255,255,255,.025);overflow:hidden
-    }
-    .lyrics-toggle summary{
-      list-style:none;cursor:pointer;padding:11px 12px;font-size:11px;letter-spacing:1px;
-      color:#ddd7db;display:flex;justify-content:space-between;align-items:center
-    }
-    .lyrics-toggle summary::-webkit-details-marker{display:none}
-    .lyrics-toggle summary::after{content:"＋";color:#8f8990;font-size:14px}
-    .lyrics-toggle[open] summary::after{content:"－"}
-    .lyrics-panel{
-      border-top:1px solid rgba(255,255,255,.08);
-      max-height:360px;overflow:auto;padding:14px 12px 16px;
-      background:rgba(0,0,0,.14)
-    }
-    .lyrics-panel pre{
-      margin:0;white-space:pre-wrap;font:inherit;font-size:12px;line-height:1.9;color:#b8b2b7
-    }
-    footer{
-      padding:26px 20px 40px;text-align:center;color:#5e5a60;
-      font-size:9px;letter-spacing:2px;border-top:1px solid rgba(255,255,255,.06)
-    }
-    @media(max-width:820px){
-      .grid{
-        grid-template-columns:1fr;
-        gap:16px;
-        padding-left:14px;
-        padding-right:14px;
-        max-width:560px;
-      }
-      .hero{
-        padding-left:16px;
-        padding-right:16px;
-      }
-      h1{font-size:32px}
-      .song{
-        width:100%;
-        padding:10px;
-        border-radius:18px;
-      }
-      .spotify-frame{
-        width:100%;
-        height:152px;
-        border-radius:14px;
-      }
-      .song-meta{
-        padding:12px 4px 4px;
-      }
-      .song h2{
-        font-size:16px;
-      }
-      .artist{
-        font-size:12px;
-      }
-      .song-actions{margin-top:10px}
-      .spotify-btn{padding:11px 10px;font-size:12px}
-      .lyrics-toggle summary{font-size:12px;padding:12px}
-      .lyrics-panel pre{font-size:13px;line-height:1.9}
-    }
-      .hero{padding-left:14px;padding-right:14px}
-      h1{font-size:32px}
-      .spotify-frame{height:152px}
-    }
-  
-    @media(min-width:821px) and (max-width:1050px){
-      .grid{grid-template-columns:repeat(2,minmax(0,1fr));}
-    }
-
-</style>
-</head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>聆汐 LingXi｜Music</title>
+<meta name="description" content="聆汐 LingXi 音樂作品與官方歌詞">
+<meta name="theme-color" content="#0d0d10">
+<style>
+*{box-sizing:border-box}body{margin:0;min-height:100vh;color:#f5f2ef;background:linear-gradient(180deg,#121216,#09090b);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans TC","PingFang TC",sans-serif}
+a{color:inherit;text-decoration:none}.nav{position:sticky;top:0;z-index:20;background:rgba(9,9,11,.82);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.08)}
+.nav-inner{max-width:1120px;margin:auto;padding:15px 20px;display:flex;align-items:center;justify-content:space-between}.brand{font-family:Georgia,serif;font-style:italic;font-size:26px}.brand small{font-style:normal;font-size:12px;margin-left:7px;color:#aaa4aa}
+.back{border:1px solid rgba(255,255,255,.18);border-radius:999px;padding:9px 13px;font-size:11px;letter-spacing:1px;color:#d8d2d6}
+.hero{max-width:1120px;margin:auto;padding:38px 20px 18px}.eyebrow{font-size:10px;letter-spacing:4px;color:#8f8990;margin-bottom:9px}h1{margin:0;font-size:40px;font-weight:500}.sub{margin-top:10px;color:#8f8990;font-size:13px;line-height:1.7}
+.grid{max-width:1120px;margin:auto;padding:12px 20px 70px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.song{border-radius:18px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.035);overflow:hidden;padding:8px}.spotify-frame{width:100%;height:152px;border:0;border-radius:12px;display:block;background:#18181c}
+.song-meta{padding:10px 3px 2px}.song-no{font-size:9px;letter-spacing:2px;color:#77727a;margin-bottom:5px}.song h2{font-size:14px;font-weight:500;margin:0 0 3px}.artist{font-size:11px;color:#858087}
+.song-actions{display:block;margin-top:9px}.spotify-btn{display:block;text-align:center;padding:9px 8px;border-radius:999px;font-size:11px;background:#eee8eb;color:#111214}
+.lyrics-toggle{margin-top:8px;border:1px solid rgba(255,255,255,.16);border-radius:14px;background:rgba(255,255,255,.025);overflow:hidden}
+.lyrics-toggle summary{list-style:none;cursor:pointer;padding:11px 12px;font-size:11px;letter-spacing:1px;color:#ddd7db;display:flex;justify-content:space-between;align-items:center}
+.lyrics-toggle summary::-webkit-details-marker{display:none}.lyrics-toggle summary::after{content:"＋";color:#8f8990;font-size:14px}.lyrics-toggle[open] summary::after{content:"－"}
+.lyrics-panel{border-top:1px solid rgba(255,255,255,.08);max-height:360px;overflow:auto;padding:14px 12px 16px;background:rgba(0,0,0,.14)}.lyrics-panel pre{margin:0;white-space:pre-wrap;font:inherit;font-size:12px;line-height:1.9;color:#b8b2b7}
+footer{padding:26px 20px 40px;text-align:center;color:#5e5a60;font-size:9px;letter-spacing:2px;border-top:1px solid rgba(255,255,255,.06)}
+@media(max-width:820px){.grid{grid-template-columns:1fr;gap:16px;padding-left:14px;padding-right:14px;max-width:560px}.hero{padding-left:16px;padding-right:16px}h1{font-size:32px}.song{width:100%;padding:10px;border-radius:18px}.spotify-frame{height:152px;border-radius:14px}.song-meta{padding:12px 4px 4px}.song h2{font-size:16px}.artist{font-size:12px}.spotify-btn{padding:11px 10px;font-size:12px}.lyrics-toggle summary{font-size:12px;padding:12px}.lyrics-panel pre{font-size:13px;line-height:1.9}}
+@media(min-width:821px) and (max-width:1050px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+</style></head>
 <body>
-  <nav class="nav">
-    <div class="nav-inner">
-      <div class="brand">LingXi <small>聆汐</small></div>
-      <a class="back" href="index.html">← BACK HOME</a>
-    </div>
-  </nav>
-
-  <header class="hero">
-    <div class="eyebrow">LINGXI MUSIC</div>
-    <h1>音樂作品</h1>
-    <div class="sub">直接使用 Spotify 官方 Embed 顯示封面與歌曲資訊，之後新增歌曲只要再加一張卡片。</div>
-  </header>
-
-  <main class="grid">
-
+<nav class="nav"><div class="nav-inner"><div class="brand">LingXi <small>聆汐</small></div><a class="back" href="index.html">← BACK HOME</a></div></nav>
+<header class="hero"><div class="eyebrow">LINGXI MUSIC</div><h1>音樂作品</h1><div class="sub">直接播放 Spotify，同時可在歌曲卡片內展開歌詞。</div></header>
+<main class="grid">
     <article class="song">
-      <iframe
-        class="spotify-frame"
-        src="https://open.spotify.com/embed/track/4Ip1SVyZ9GYDsTSgr6PZ7A?utm_source=oembed&theme=0"
+      <iframe class="spotify-frame"
+        src="https://open.spotify.com/embed/track/4Ip1SVyZ9GYDsTSgr6PZ7A?utm_source=generator&theme=0"
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-        loading="lazy"
-        title="我真的撐不住了 Spotify">
-      </iframe>
+        loading="lazy" title="我真的撐不住了 Spotify"></iframe>
       <div class="song-meta">
         <div class="song-no">SINGLE 01</div>
         <h2>我真的撐不住了</h2>
         <div class="artist">聆汐 · LingXi</div>
       </div>
       <div class="song-actions">
-        <a class="lyrics-btn" href="lyrics01.html">LYRICS 歌詞</a>
-        <div class="song-actions">
         <a class="spotify-btn" href="https://open.spotify.com/track/4Ip1SVyZ9GYDsTSgr6PZ7A" target="_blank" rel="noopener">Spotify 聆聽 ↗</a>
         <details class="lyrics-toggle">
           <summary>LYRICS 歌詞</summary>
@@ -216,25 +97,19 @@
 我撐不住了……</pre></div>
         </details>
       </div>
-      </div>
     </article>
 
     <article class="song">
-      <iframe
-        class="spotify-frame"
-        src="https://open.spotify.com/embed/track/39n18cQaHndNeS9JnOHrCS?utm_source=oembed&theme=0"
+      <iframe class="spotify-frame"
+        src="https://open.spotify.com/embed/track/39n18cQaHndNeS9JnOHrCS?utm_source=generator&theme=0"
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-        loading="lazy"
-        title="還在這裡 Spotify">
-      </iframe>
+        loading="lazy" title="還在這裡 Spotify"></iframe>
       <div class="song-meta">
         <div class="song-no">SINGLE 02</div>
         <h2>還在這裡</h2>
         <div class="artist">聆汐 · LingXi</div>
       </div>
       <div class="song-actions">
-        <a class="lyrics-btn" href="lyrics02.html">LYRICS 歌詞</a>
-        <div class="song-actions">
         <a class="spotify-btn" href="https://open.spotify.com/track/39n18cQaHndNeS9JnOHrCS" target="_blank" rel="noopener">Spotify 聆聽 ↗</a>
         <details class="lyrics-toggle">
           <summary>LYRICS 歌詞</summary>
@@ -319,25 +194,19 @@
 我沒有離開</pre></div>
         </details>
       </div>
-      </div>
     </article>
 
     <article class="song">
-      <iframe
-        class="spotify-frame"
+      <iframe class="spotify-frame"
         src="https://open.spotify.com/embed/track/2XhAWoXkZQNqqQrlvPqeu9?utm_source=generator&theme=0"
         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-        loading="lazy"
-        title="我們曾經那麼愛 Spotify">
-      </iframe>
+        loading="lazy" title="我們曾經那麼愛 Spotify"></iframe>
       <div class="song-meta">
         <div class="song-no">SINGLE 03</div>
         <h2>我們曾經那麼愛</h2>
         <div class="artist">聆汐 · LingXi</div>
       </div>
       <div class="song-actions">
-        <a class="lyrics-btn" href="lyrics03.html">LYRICS 歌詞</a>
-        <div class="song-actions">
         <a class="spotify-btn" href="https://open.spotify.com/track/2XhAWoXkZQNqqQrlvPqeu9" target="_blank" rel="noopener">Spotify 聆聽 ↗</a>
         <details class="lyrics-toggle">
           <summary>LYRICS 歌詞</summary>
@@ -403,11 +272,96 @@
 我卻走不出來</pre></div>
         </details>
       </div>
-      </div>
     </article>
 
-  </main>
+    <article class="song">
+      <iframe class="spotify-frame"
+        src="https://open.spotify.com/embed/track/6FnZBXcrhICqyuhnSVXJlo?utm_source=generator&theme=0"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy" title="差一點 Spotify"></iframe>
+      <div class="song-meta">
+        <div class="song-no">SINGLE 04</div>
+        <h2>差一點</h2>
+        <div class="artist">聆汐 · LingXi</div>
+      </div>
+      <div class="song-actions">
+        <a class="spotify-btn" href="https://open.spotify.com/track/6FnZBXcrhICqyuhnSVXJlo" target="_blank" rel="noopener">Spotify 聆聽 ↗</a>
+        <details class="lyrics-toggle">
+          <summary>LYRICS 歌詞</summary>
+          <div class="lyrics-panel"><pre>[Verse 1]
+燈光落在你的側臉
+像那年還沒熄滅的夏天
+我們把未來說得很遠
+以為時間會替我們實現
 
-  <footer>© 2026 LINGXI · BONSKAZ MUSIC</footer>
-</body>
-</html>
+窗邊那杯沒喝完的咖啡
+還留著昨天的餘溫
+原來承諾不是沒有發生
+只是停在來不及的人生
+
+[Pre-Chorus]
+後來風把話吹散了
+沉默比眼淚還誠實
+如果回憶也會老去
+它會不會替我們停止
+
+[Chorus]
+差一點到永遠
+差一個擁抱沒兌現
+我們熬過無數黑夜
+卻輸給沒有彼此的明天
+
+差一點到永遠
+差一句挽留沒說完
+我還站在故事終點
+等一句不會再出現的成全
+
+[Verse 2]
+街角那家熟悉的店
+還播放著我們愛的唱片
+只是座位換了別人
+連回憶都學會向前
+
+我試著把名字藏進人海
+假裝已經沒有留戀
+可是每當夜色太安靜
+思念總比我早一點
+
+[Pre-Chorus]
+原來不是不夠勇敢
+只是害怕最後一句再見
+我們都曾努力靠近
+卻在沉默裡越走越遠
+
+[Bridge]
+如果時光願意慢一點
+是不是能改寫那一頁
+如果最後回頭的人是我
+你會不會還站在原點
+
+[Final Chorus]
+差一點到永遠
+差一個轉身沒實現
+那些寫好的心願
+最後停在沒有你的季節
+
+差一點到永遠
+差一場重逢沒上演
+原來最深的遺憾
+不是失去那一天
+
+是我真的相信過
+我們會走到永遠
+
+[Outro]
+風吹過熟悉的街
+只剩名字留在心裡面
+如果故事還有下一頁
+願我們不用再
+差一點到永遠</pre></div>
+        </details>
+      </div>
+    </article>
+</main>
+<footer>© 2026 LINGXI · BONSKAZ MUSIC</footer>
+</body></html>
