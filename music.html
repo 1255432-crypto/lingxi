@@ -49,10 +49,12 @@
     .song-no{font-size:9px;letter-spacing:2px;color:#77727a;margin-bottom:5px}
     .song h2{font-size:14px;font-weight:500;margin:0 0 3px}
     .artist{font-size:11px;color:#858087}
-    .spotify-btn{
-      display:block;text-align:center;margin-top:9px;padding:9px 8px;border-radius:999px;
-      background:#eee8eb;color:#111214;font-size:11px
+    .song-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:9px}
+    .spotify-btn,.lyrics-btn{
+      display:block;text-align:center;padding:9px 8px;border-radius:999px;font-size:11px
     }
+    .spotify-btn{background:#eee8eb;color:#111214}
+    .lyrics-btn{border:1px solid rgba(255,255,255,.20);color:#eee8eb;background:transparent}
     footer{
       padding:26px 20px 40px;text-align:center;color:#5e5a60;
       font-size:9px;letter-spacing:2px;border-top:1px solid rgba(255,255,255,.06)
@@ -89,8 +91,8 @@
       .artist{
         font-size:12px;
       }
-      .spotify-btn{
-        margin-top:10px;
+      .song-actions{margin-top:10px;gap:8px}
+      .spotify-btn,.lyrics-btn{
         padding:11px 10px;
         font-size:12px;
       }
@@ -135,7 +137,10 @@
         <h2>我真的撐不住了</h2>
         <div class="artist">聆汐 · LingXi</div>
       </div>
-      <a class="spotify-btn" href="https://open.spotify.com/track/4Ip1SVyZ9GYDsTSgr6PZ7A" target="_blank" rel="noopener">Spotify 聆聽 ↗</a>
+      <div class="song-actions">
+        <a class="lyrics-btn" href="lyrics01.html">LYRICS 歌詞</a>
+        <a class="spotify-btn" href="https://open.spotify.com/track/4Ip1SVyZ9GYDsTSgr6PZ7A" target="_blank" rel="noopener">Spotify 聆聽 ↗</a>
+      </div>
     </article>
 
     <article class="song">
@@ -151,7 +156,10 @@
         <h2>還在這裡</h2>
         <div class="artist">聆汐 · LingXi</div>
       </div>
-      <a class="spotify-btn" href="https://open.spotify.com/track/39n18cQaHndNeS9JnOHrCS" target="_blank" rel="noopener">Spotify 聆聽 ↗</a>
+      <div class="song-actions">
+        <a class="lyrics-btn" href="lyrics02.html">LYRICS 歌詞</a>
+        <a class="spotify-btn" href="https://open.spotify.com/track/39n18cQaHndNeS9JnOHrCS" target="_blank" rel="noopener">Spotify 聆聽 ↗</a>
+      </div>
     </article>
 
     <article class="song">
@@ -167,7 +175,10 @@
         <h2>我們曾經那麼愛</h2>
         <div class="artist">聆汐 · LingXi</div>
       </div>
-      <a class="spotify-btn" href="https://open.spotify.com/track/2XhAWoXkZQNqqQrlvPqeu9" target="_blank" rel="noopener">Spotify 聆聽 ↗</a>
+      <div class="song-actions">
+        <a class="lyrics-btn" href="lyrics03.html">LYRICS 歌詞</a>
+        <a class="spotify-btn" href="https://open.spotify.com/track/2XhAWoXkZQNqqQrlvPqeu9" target="_blank" rel="noopener">Spotify 聆聽 ↗</a>
+      </div>
     </article>
 
   </main>
