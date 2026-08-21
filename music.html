@@ -49,12 +49,30 @@
     .song-no{font-size:9px;letter-spacing:2px;color:#77727a;margin-bottom:5px}
     .song h2{font-size:14px;font-weight:500;margin:0 0 3px}
     .artist{font-size:11px;color:#858087}
-    .song-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:9px}
-    .spotify-btn,.lyrics-btn{
-      display:block;text-align:center;padding:9px 8px;border-radius:999px;font-size:11px
+    .song-actions{display:block;margin-top:9px}
+    .spotify-btn{
+      display:block;text-align:center;padding:9px 8px;border-radius:999px;font-size:11px;
+      background:#eee8eb;color:#111214
     }
-    .spotify-btn{background:#eee8eb;color:#111214}
-    .lyrics-btn{border:1px solid rgba(255,255,255,.20);color:#eee8eb;background:transparent}
+    .lyrics-toggle{
+      margin-top:8px;border:1px solid rgba(255,255,255,.16);border-radius:14px;
+      background:rgba(255,255,255,.025);overflow:hidden
+    }
+    .lyrics-toggle summary{
+      list-style:none;cursor:pointer;padding:11px 12px;font-size:11px;letter-spacing:1px;
+      color:#ddd7db;display:flex;justify-content:space-between;align-items:center
+    }
+    .lyrics-toggle summary::-webkit-details-marker{display:none}
+    .lyrics-toggle summary::after{content:"＋";color:#8f8990;font-size:14px}
+    .lyrics-toggle[open] summary::after{content:"－"}
+    .lyrics-panel{
+      border-top:1px solid rgba(255,255,255,.08);
+      max-height:360px;overflow:auto;padding:14px 12px 16px;
+      background:rgba(0,0,0,.14)
+    }
+    .lyrics-panel pre{
+      margin:0;white-space:pre-wrap;font:inherit;font-size:12px;line-height:1.9;color:#b8b2b7
+    }
     footer{
       padding:26px 20px 40px;text-align:center;color:#5e5a60;
       font-size:9px;letter-spacing:2px;border-top:1px solid rgba(255,255,255,.06)
@@ -91,11 +109,10 @@
       .artist{
         font-size:12px;
       }
-      .song-actions{margin-top:10px;gap:8px}
-      .spotify-btn,.lyrics-btn{
-        padding:11px 10px;
-        font-size:12px;
-      }
+      .song-actions{margin-top:10px}
+      .spotify-btn{padding:11px 10px;font-size:12px}
+      .lyrics-toggle summary{font-size:12px;padding:12px}
+      .lyrics-panel pre{font-size:13px;line-height:1.9}
     }
       .hero{padding-left:14px;padding-right:14px}
       h1{font-size:32px}
@@ -139,7 +156,66 @@
       </div>
       <div class="song-actions">
         <a class="lyrics-btn" href="lyrics01.html">LYRICS 歌詞</a>
+        <div class="song-actions">
         <a class="spotify-btn" href="https://open.spotify.com/track/4Ip1SVyZ9GYDsTSgr6PZ7A" target="_blank" rel="noopener">Spotify 聆聽 ↗</a>
+        <details class="lyrics-toggle">
+          <summary>LYRICS 歌詞</summary>
+          <div class="lyrics-panel"><pre>[Verse 1]
+你說這段愛已經走到盡頭
+我卻還不肯放手
+那些一起走過的以後
+現在只剩我一個人停留
+
+[Verse 2]
+你轉身那一刻太冷
+冷到我無法承受
+我連一句挽留都沒有
+只剩眼淚失控
+
+[Pre-Chorus]
+我忍著不崩潰
+卻撐不到明天
+
+[Chorus]
+我真的撐不住了你知道嗎
+沒有你我什麼都不像啊
+我把自己困在這段愛裡
+走不出去也放不下
+
+我真的撐不住了你知道嗎
+每一秒都在崩塌
+如果失去你才叫長大
+那我寧願不要長大
+
+[Verse 3]
+房間還留著你的味道
+我怎麼清都清不掉
+每一個角落都在提醒
+你已經走掉
+
+[Pre-Chorus 2]
+我試著讓自己睡著
+卻整夜醒著心跳
+
+[Bridge]
+我崩潰在凌晨三點
+連自己都不認得
+
+[Chorus - Final]
+我真的撐不住了你知道嗎
+沒有你我什麼都不像啊
+我把自己困在這段愛裡
+走不出去也放不下
+
+我真的撐不住了你知道嗎（高音延長）
+我真的快要壞掉了啊（爆）
+如果這就是愛的代價
+為什麼是我留下
+
+[Outro]
+我撐不住了……</pre></div>
+        </details>
+      </div>
       </div>
     </article>
 
@@ -158,7 +234,91 @@
       </div>
       <div class="song-actions">
         <a class="lyrics-btn" href="lyrics02.html">LYRICS 歌詞</a>
+        <div class="song-actions">
         <a class="spotify-btn" href="https://open.spotify.com/track/39n18cQaHndNeS9JnOHrCS" target="_blank" rel="noopener">Spotify 聆聽 ↗</a>
+        <details class="lyrics-toggle">
+          <summary>LYRICS 歌詞</summary>
+          <div class="lyrics-panel"><pre>[Verse 1]
+夜走得太慢
+時間像故意試探
+我把心事一層一層
+疊成不說的答案
+
+窗外的燈
+亮得有點心寒
+世界沒有為誰停下
+我卻停在原地回看
+
+[Pre-Chorus]
+如果眼淚真的有重量
+為什麼還能往下藏
+原來我不是不痛
+只是還不想退場
+
+[Chorus]
+我沒有比較勇敢
+只是學會不閃躲
+當風聲越來越大
+我沒有轉身走
+
+我沒有更多把握
+卻也沒有放手
+就算什麼都沒留下
+至少 我還在這裡活
+
+[Verse 2]
+人來又人往
+像一場短暫合唱
+有些名字沒能唱完
+就被時間收場
+
+我試著笑
+卻比哭更慌張
+原來習慣逞強
+也是一種投降
+
+[Pre-Chorus 2]
+如果明天不給方向
+至少今晚我還能想
+心跳那麼清楚
+騙不了自己一樣
+
+[Chorus]
+我沒有比較勇敢
+只是沒有離開
+在最安靜的角落
+撐住最後的期待
+
+我沒有完美模樣
+也沒有誰欣賞
+但只要心還沒冷卻
+我就不算 被遺忘
+
+[Bridge｜情緒最高點，A-Lin 式拉升]
+如果世界真的那麼吵
+那就讓我用沉默對抗
+就算聲音快要用完
+我也不想 就這樣退場
+
+[Final Chorus｜全開但不灑狗血]
+我沒有奇蹟降臨
+也沒有誰來證明
+只是當夜色再一次逼近
+我還願意 呼吸
+
+如果有一天我累了
+不是因為失望
+只是我終於學會
+把溫柔 留給自己收藏
+
+[Outro]
+燈一盞一盞暗下去
+世界慢慢不說話
+而我知道
+至少此刻
+我沒有離開</pre></div>
+        </details>
+      </div>
       </div>
     </article>
 
@@ -177,7 +337,72 @@
       </div>
       <div class="song-actions">
         <a class="lyrics-btn" href="lyrics03.html">LYRICS 歌詞</a>
+        <div class="song-actions">
         <a class="spotify-btn" href="https://open.spotify.com/track/2XhAWoXkZQNqqQrlvPqeu9" target="_blank" rel="noopener">Spotify 聆聽 ↗</a>
+        <details class="lyrics-toggle">
+          <summary>LYRICS 歌詞</summary>
+          <div class="lyrics-panel"><pre>[Verse 1]
+我們走到最後這一步
+誰都沒有認輸
+只是愛太孤獨
+讓我們都迷路
+
+[Verse 2]
+你說放手才是成熟
+我卻只看到結束
+如果這就是成長
+為什麼我還在哭
+
+[Pre-Chorus]
+我試著說服自己
+你只是過去而已
+可每次夜深人靜
+我還是會想起你
+
+[Chorus]
+我們曾經那麼愛
+為什麼走到現在
+只剩我一個人還在
+回憶裡徘徊
+
+我們曾經那麼愛
+卻變成一場傷害
+你走得那麼灑脫
+我卻走不出來
+
+[Verse 3]
+那些說過的永遠
+現在全都聽不見
+只剩下我的房間
+還留著你的從前
+
+[Pre-Chorus 2]
+我明明想要離開
+卻又一次倒退回來
+愛怎麼會那麼壞
+讓人一邊痛一邊愛
+
+[Bridge]
+我還在愛
+你卻不在
+我把自己留在原地
+等一個回不來的未來
+
+[Final Chorus]
+我們曾經那麼愛
+為什麼走到現在
+只剩我一個人還在
+回憶裡徘徊
+
+我們曾經那麼愛
+卻變成一場傷害
+你走得那麼灑脫
+我卻走不出來
+
+[Outro]
+我卻走不出來</pre></div>
+        </details>
+      </div>
       </div>
     </article>
 
